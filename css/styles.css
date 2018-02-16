@@ -1,3 +1,18 @@
-
+header {
+  background: white; }
+  header .container {
+    margin: 0 auto;
+    width: 1500px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between; }
+    header .container .logo {
+      width: 100px;
+      height: 30px;
+      background: red; }
+    header .container .navbar nav ul li {
+      list-style-type: none; }
+      header .container .navbar nav ul li a {
+        text-decoration: none; }
 
 /*# sourceMappingURL=styles.css.map */
