@@ -5,6 +5,7 @@ header {
         width: $main-text-container-width;
         height: $header-height;
         display: flex;
+        align-items: center;
         justify-content: space-between;
         .logo {
             width: 100px;
@@ -12,15 +13,36 @@ header {
             background: red;
         }
         .navbar nav { // Navbar
+            display: flex;
+            flex-direction: row;
             ul {
+                display: flex;
+                align-items: center;
                 li {
+                    float: left;
                     list-style-type: none;
+                    margin-left: 30px;
                     a {
                         text-decoration: none;
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: #5d6e80;
+                        transition: color ease .2s;
+
+                        &:hover {
+                            color: $primary-green-color;
+                        }
                     }
                 }
-                .search {
-    
+            }
+            .search {
+                img {
+                    max-height: 40px;
+                    margin-left: 30px;
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
         }
