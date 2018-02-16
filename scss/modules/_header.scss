@@ -2,8 +2,8 @@ header {
     background: white;
     .container {
         margin: 0 auto;
-        width: 1500px;
-        height: 100px;
+        width: $main-text-container-width;
+        height: $header-height;
         display: flex;
         justify-content: space-between;
         .logo {
