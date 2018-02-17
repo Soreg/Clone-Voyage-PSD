@@ -1,10 +1,21 @@
+h2 {
+  text-transform: uppercase;
+  font-size: 60px; }
+
+h4 {
+  font-size: 30px; }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
-body {
-  background: black; }
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(44, 62, 80, 0.7);
+  z-index: 1; }
 
 header {
   background: white; }
@@ -43,5 +54,38 @@ header {
         margin-left: 30px; }
         header .container .navbar nav .search img:hover {
           cursor: pointer; }
+
+#slider-section .slider {
+  max-height: 850px;
+  overflow: hidden;
+  position: relative; }
+  #slider-section .slider .slide {
+    z-index: 0; }
+    #slider-section .slider .slide .description {
+      z-index: 2;
+      color: white;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #slider-section .slider .slide .description .slider-buttons {
+        display: flex; }
+        #slider-section .slider .slide .description .slider-buttons .btn {
+          padding: 20px;
+          border: 2px solid white;
+          display: block;
+          border-radius: 5px;
+          text-decoration: none;
+          color: white;
+          font-size: 25px;
+          text-transform: uppercase;
+          transition: all ease .2s;
+          margin: 40px 15px; }
+          #slider-section .slider .slide .description .slider-buttons .btn:hover {
+            background: #1dd2af;
+            border-color: #1dd2af; }
 
 /*# sourceMappingURL=styles.css.map */

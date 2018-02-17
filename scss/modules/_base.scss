@@ -5,5 +5,9 @@
 }
 
 body {
-    background: black;
+    
+}
+
+.overlay {
+    @include overlay;
 }

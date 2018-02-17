@@ -1,0 +1,37 @@
+#slider-section {
+    .slider {
+        max-height: 850px;
+        overflow: hidden;
+        position: relative;
+        .slider-arrow {
+
+        }
+        .prev-arrow {
+
+        }
+        .slide {
+            z-index: 0;
+            .description {
+                z-index: 2;
+                color: white;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .slider-buttons {
+                    display: flex;
+                    .btn {
+                        @include button(5px, 25px);
+                        margin: 40px 15px;
+                    }
+                }
+            }
+        }
+        .next-arrow {
+
+        }
+    }
+}
