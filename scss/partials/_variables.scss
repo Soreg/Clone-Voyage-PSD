@@ -1,3 +1,5 @@
+// imports
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 // Sizes
 $header-height: 100px;
@@ -10,10 +12,4 @@ $theme-secondary-color: #2c3e50;
 $theme-overlay-color: rgba(44, 62, 80, 0.7);
 
 // Fonts
-h2 {
-    text-transform: uppercase;
-    font-size: 60px;
-}
-h4 {
-    font-size: 30px;
-}
+$main-font: "Roboto", Helvetica, Arial, Sans-serif;
