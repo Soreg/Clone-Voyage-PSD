@@ -4,10 +4,37 @@
         overflow: hidden;
         position: relative;
         .slider-arrow {
+            z-index: 3;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(255,255,255, 0.2);
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            transition: all ease .2s;
 
+            &:hover {
+                background: $theme-primary-color;
+                cursor: pointer;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                left: 0;
+                right: 0;
+                max-width: 40%;
+                max-height: 40%;
+            }
         }
         .prev-arrow {
-
+            left: 0;
+            img {
+                transform: rotate(180deg);
+            }
         }
         .slide {
             z-index: 0;
@@ -31,7 +58,7 @@
             }
         }
         .next-arrow {
-
+            right: 0;
         }
     }
 }
