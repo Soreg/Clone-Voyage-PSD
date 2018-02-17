@@ -61,4 +61,55 @@
             right: 0;
         }
     }
+
+    .search-slider {
+        width: 100%;
+        background: $theme-secondary-color;
+        display: flex;
+        .headline-area {
+            width: 25%;
+            border-right: 1px solid #8293a4;
+            padding: 20px;
+            .text {
+                float: right;
+                margin-right: 40px;
+                text-transform: uppercase;
+                h5 {
+                    color: #8293a4;
+                }
+                h4 {
+                    color: white;
+                }
+            }
+        }
+        .input-areas {
+            display: flex;
+            align-items: center;
+            margin-left: 40px;
+
+            label {
+                margin: 0 15px;
+                color: #8293a4;
+                font-size: 20px;
+                font-weight: lighter;
+            }
+            input[type="text"] {
+                padding: 5px;
+                font-size: 20px;
+            }
+            input[type="submit"] {
+                margin-left: 20px;
+                @include button(0);
+                display: inline;
+                padding: 10px 20px;
+                background: $theme-primary-color;
+                border: none;
+                
+
+                &:hover {
+                    background: darken($theme-primary-color, 10%);
+                }
+            }
+        }
+    }
 }

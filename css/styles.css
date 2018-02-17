@@ -14,6 +14,9 @@ h2 {
 h4 {
   font-size: 30px; }
 
+h5 {
+  font-size: 22px; }
+
 .overlay {
   position: absolute;
   width: 100%;
@@ -113,11 +116,63 @@ header {
           font-size: 25px;
           text-transform: uppercase;
           transition: all ease .2s;
+          vertical-align: top;
           margin: 40px 15px; }
           #slider-section .slider .slide .description .slider-buttons .btn:hover {
             background: #1dd2af;
-            border-color: #1dd2af; }
+            border-color: #1dd2af;
+            cursor: pointer; }
   #slider-section .slider .next-arrow {
     right: 0; }
+#slider-section .search-slider {
+  width: 100%;
+  background: #2c3e50;
+  display: flex; }
+  #slider-section .search-slider .headline-area {
+    width: 25%;
+    border-right: 1px solid #8293a4;
+    padding: 20px; }
+    #slider-section .search-slider .headline-area .text {
+      float: right;
+      margin-right: 40px;
+      text-transform: uppercase; }
+      #slider-section .search-slider .headline-area .text h5 {
+        color: #8293a4; }
+      #slider-section .search-slider .headline-area .text h4 {
+        color: white; }
+  #slider-section .search-slider .input-areas {
+    display: flex;
+    align-items: center;
+    margin-left: 40px; }
+    #slider-section .search-slider .input-areas label {
+      margin: 0 15px;
+      color: #8293a4;
+      font-size: 20px;
+      font-weight: lighter; }
+    #slider-section .search-slider .input-areas input[type="text"] {
+      padding: 5px;
+      font-size: 20px; }
+    #slider-section .search-slider .input-areas input[type="submit"] {
+      margin-left: 20px;
+      padding: 20px;
+      border: 2px solid white;
+      display: block;
+      border-radius: 0;
+      text-decoration: none;
+      color: white;
+      font-size: 15px;
+      text-transform: uppercase;
+      transition: all ease .2s;
+      vertical-align: top;
+      display: inline;
+      padding: 10px 20px;
+      background: #1dd2af;
+      border: none; }
+      #slider-section .search-slider .input-areas input[type="submit"]:hover {
+        background: #1dd2af;
+        border-color: #1dd2af;
+        cursor: pointer; }
+      #slider-section .search-slider .input-areas input[type="submit"]:hover {
+        background: #17a58a; }
 
 /*# sourceMappingURL=styles.css.map */

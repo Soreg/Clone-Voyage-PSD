@@ -16,9 +16,11 @@
     font-size: $font-size;
     text-transform: uppercase;
     transition: all ease .2s;
+    vertical-align: top;
 
     &:hover {
         background: $theme-primary-color;
         border-color: $theme-primary-color;
+        cursor: pointer;
     }
 }
