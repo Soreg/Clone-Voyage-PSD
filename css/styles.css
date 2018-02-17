@@ -9,13 +9,13 @@ body {
 
 h2 {
   text-transform: uppercase;
-  font-size: 60px; }
+  font-size: 45px; }
 
 h4 {
-  font-size: 30px; }
+  font-size: 22px; }
 
 h5 {
-  font-size: 22px; }
+  font-size: 16px; }
 
 .overlay {
   position: absolute;
@@ -69,8 +69,8 @@ header {
   #slider-section .slider .slider-arrow {
     z-index: 3;
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background: rgba(255, 255, 255, 0.2);
     top: 0;
     bottom: 0;
@@ -104,16 +104,19 @@ header {
       flex-direction: column;
       justify-content: center;
       align-items: center; }
+      #slider-section .slider .slide .description h4 {
+        margin-top: 5px;
+        font-weight: normal; }
       #slider-section .slider .slide .description .slider-buttons {
         display: flex; }
         #slider-section .slider .slide .description .slider-buttons .btn {
-          padding: 20px;
+          padding: 15px 20px;
           border: 2px solid white;
           display: block;
           border-radius: 5px;
           text-decoration: none;
           color: white;
-          font-size: 25px;
+          font-size: 18px;
           text-transform: uppercase;
           transition: all ease .2s;
           vertical-align: top;
@@ -151,10 +154,10 @@ header {
       font-weight: lighter; }
     #slider-section .search-slider .input-areas input[type="text"] {
       padding: 5px;
-      font-size: 20px; }
+      font-size: 18px; }
     #slider-section .search-slider .input-areas input[type="submit"] {
       margin-left: 20px;
-      padding: 20px;
+      padding: 15px 20px;
       border: 2px solid white;
       display: block;
       border-radius: 0;

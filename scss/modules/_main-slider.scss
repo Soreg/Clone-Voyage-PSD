@@ -6,8 +6,8 @@
         .slider-arrow {
             z-index: 3;
             position: absolute;
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             background: rgba(255,255,255, 0.2);
             top: 0;
             bottom: 0;
@@ -48,10 +48,14 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                h4 {
+                    margin-top: 5px;
+                    font-weight: normal;
+                }
                 .slider-buttons {
                     display: flex;
                     .btn {
-                        @include button(5px, 25px);
+                        @include button(5px, 18px);
                         margin: 40px 15px;
                     }
                 }
@@ -95,7 +99,7 @@
             }
             input[type="text"] {
                 padding: 5px;
-                font-size: 20px;
+                font-size: 18px;
             }
             input[type="submit"] {
                 margin-left: 20px;
@@ -105,7 +109,6 @@
                 background: $theme-primary-color;
                 border: none;
                 
-
                 &:hover {
                     background: darken($theme-primary-color, 10%);
                 }
