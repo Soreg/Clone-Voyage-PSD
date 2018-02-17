@@ -92,10 +92,15 @@ header {
     left: 0; }
     #slider-section .slider .prev-arrow img {
       transform: rotate(180deg); }
+  #slider-section .slider .slides {
+    display: block;
+    width: 6000px; }
   #slider-section .slider .slide {
-    z-index: 0; }
+    z-index: 0;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -4px; }
     #slider-section .slider .slide .description {
-      z-index: 2;
       color: white;
       position: absolute;
       width: 100%;
@@ -103,7 +108,8 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      z-index: 2; }
       #slider-section .slider .slide .description h4 {
         margin-top: 5px;
         font-weight: normal; }
