@@ -247,7 +247,6 @@ header {
         border-color: #1dd2af;
         background: #1dd2af;
         height: 300px;
-        width: 320px;
         cursor: pointer; }
         #specials .packages .package:hover .details {
           background: #2c3e50; }
