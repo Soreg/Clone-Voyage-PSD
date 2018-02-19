@@ -56,9 +56,13 @@
                 justify-content: center;
                 align-items: center;
                 z-index: 2;
+                h2 {
+                    text-align: center;
+                }
                 h4 {
                     margin-top: 5px;
                     font-weight: normal;
+                    text-align: center;
                 }
                 .slider-buttons {
                     display: flex;
@@ -72,7 +76,21 @@
         .next-arrow {
             right: 0;
         }
+        // media for slider
+        @media screen and (max-width: 650px) {
+            .slide {
+                .description {
+                    .slider-buttons {
+                        flex-direction: column;
+                        .btn {
+                            margin: 10px auto;
+                        }
+                    }
+                }
+            }
+        }
     }
+
 
     .search-slider {
         width: 100%;
@@ -119,6 +137,42 @@
                 
                 &:hover {
                     background: darken($theme-primary-color, 10%);
+                }
+            }
+        }
+        // media for search-slider 
+        @media screen and (max-width: 1130px) {
+            flex-direction: column;
+            .headline-area {
+                border-right: none;
+                width: 100%;
+                .text {
+                    float: none;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+            }
+            .input-areas {
+                margin: 0 auto 30px auto;
+                form {
+                    margin: 0 auto;
+                }
+            }
+        }
+        @media screen and (max-width: 830px) {
+            .input-areas {
+                width: 100%;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80%;
+
+                    input[type="text"] {
+                        width: 80%;
+                        margin: 10px auto;
+                    }
                 }
             }
         }

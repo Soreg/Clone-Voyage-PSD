@@ -16,7 +16,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 300px;
         .package {
             border-radius: 5px;
             padding: 5px;
@@ -75,6 +74,26 @@
                     }
                 }
             }
+        }
+    }
+    @media screen and (max-width: 1500px) {
+        .packages {
+            width: 1000px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            .package {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        .packages {
+            width: 670px;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .packages {
+            width: 300px;
         }
     }
 }

@@ -118,9 +118,12 @@ header {
       justify-content: center;
       align-items: center;
       z-index: 2; }
+      #slider-section .slider .slide .description h2 {
+        text-align: center; }
       #slider-section .slider .slide .description h4 {
         margin-top: 5px;
-        font-weight: normal; }
+        font-weight: normal;
+        text-align: center; }
       #slider-section .slider .slide .description .slider-buttons {
         display: flex; }
         #slider-section .slider .slide .description .slider-buttons .btn {
@@ -141,6 +144,11 @@ header {
             cursor: pointer; }
   #slider-section .slider .next-arrow {
     right: 0; }
+  @media screen and (max-width: 650px) {
+    #slider-section .slider .slide .description .slider-buttons {
+      flex-direction: column; }
+      #slider-section .slider .slide .description .slider-buttons .btn {
+        margin: 10px auto; } }
 #slider-section .search-slider {
   width: 100%;
   background: #2c3e50;
@@ -191,6 +199,32 @@ header {
         cursor: pointer; }
       #slider-section .search-slider .input-areas input[type="submit"]:hover {
         background: #17a58a; }
+  @media screen and (max-width: 1130px) {
+    #slider-section .search-slider {
+      flex-direction: column; }
+      #slider-section .search-slider .headline-area {
+        border-right: none;
+        width: 100%; }
+        #slider-section .search-slider .headline-area .text {
+          float: none;
+          text-align: center;
+          margin: 0 auto; }
+      #slider-section .search-slider .input-areas {
+        margin: 0 auto 30px auto; }
+        #slider-section .search-slider .input-areas form {
+          margin: 0 auto; } }
+  @media screen and (max-width: 830px) {
+    #slider-section .search-slider .input-areas {
+      width: 100%; }
+      #slider-section .search-slider .input-areas form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%; }
+        #slider-section .search-slider .input-areas form input[type="text"] {
+          width: 80%;
+          margin: 10px auto; } }
 
 #specials {
   padding-bottom: 150px; }
@@ -206,8 +240,7 @@ header {
   #specials .packages {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 300px; }
+    align-items: center; }
     #specials .packages .package {
       border-radius: 5px;
       padding: 5px;
@@ -252,6 +285,19 @@ header {
           background: #2c3e50; }
           #specials .packages .package:hover .details p:first-child {
             color: white; }
+  @media screen and (max-width: 1500px) {
+    #specials .packages {
+      width: 1000px;
+      margin: 0 auto;
+      flex-wrap: wrap; }
+      #specials .packages .package {
+        margin-bottom: 30px; } }
+  @media screen and (max-width: 1000px) {
+    #specials .packages {
+      width: 670px; } }
+  @media screen and (max-width: 700px) {
+    #specials .packages {
+      width: 300px; } }
 
 #holiday-type {
   width: 100%;
@@ -261,7 +307,7 @@ header {
   overflow: hidden;
   background: url("../../img/holiday-types/cruise.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center;
   z-index: 0;
   transition: all .3s linear; }
@@ -278,10 +324,11 @@ header {
       color: #8293a4;
       margin-top: 5px; }
     #holiday-type .container .packages {
-      width: 65%;
+      width: 1100px;
       margin: 60px auto 0 auto;
       display: flex;
-      justify-content: space-around; }
+      justify-content: space-around;
+      flex-wrap: wrap; }
       #holiday-type .container .packages .package {
         max-width: 150px;
         max-height: 150px; }
@@ -300,5 +347,19 @@ header {
             border-color: #1dd2af; }
           #holiday-type .container .packages .package:hover p, #holiday-type .container .packages .package.selected p {
             color: #1dd2af; }
+  @media screen and (max-width: 1200px) {
+    #holiday-type {
+      height: 700px; }
+      #holiday-type .container .packages {
+        width: 600px; }
+        #holiday-type .container .packages .package {
+          margin: 30px 15px; } }
+  @media screen and (max-width: 730px) {
+    #holiday-type {
+      height: 1500px; }
+      #holiday-type .container {
+        padding: 60px 0; }
+        #holiday-type .container .packages {
+          width: 300px; } }
 
 /*# sourceMappingURL=styles.css.map */
