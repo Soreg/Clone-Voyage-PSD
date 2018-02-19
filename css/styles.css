@@ -259,11 +259,12 @@ header {
   position: relative;
   height: 450px;
   overflow: hidden;
-  background: url("../../img/holiday-types/cruise.jpeg");
+  background: url("../../img/holiday-types/cruise.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
-  z-index: 0; }
+  z-index: 0;
+  transition: all .3s linear; }
   #holiday-type .container {
     padding: 60px;
     position: absolute;
@@ -285,6 +286,7 @@ header {
         max-width: 150px;
         max-height: 150px; }
         #holiday-type .container .packages .package .icon {
+          z-index: 1;
           border: 4px solid white;
           border-radius: 50%;
           width: 150px;
