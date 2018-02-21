@@ -1,0 +1,35 @@
+#reviews {
+    .container {
+        padding-bottom: 60px;
+        .description {
+            text-align: center;
+            margin: 50px auto 30px auto;
+            h4 {
+                color: $theme-secondary-color;
+                text-transform: uppercase;
+            }
+            p {
+                color: #8293a4;
+                margin-top: 5px;
+            }
+        }
+        .reviews {
+            display: inline-flex;
+            flex-wrap: nowrap;
+            .review {
+                width: 500px;
+                margin: 0 10px;
+                border: 1px solid #a5b3c2;
+                padding: 20px;
+                border-top: 5px solid $theme-primary-color;
+                h5 {
+                    color: lighten($theme-primary-color, 10%);
+                    margin: 3px 0;
+                }
+                h6.location {
+                    color: rgb(165, 165, 165);
+                }
+            }
+        }
+    }
+}
