@@ -375,14 +375,19 @@ header {
       color: #8293a4;
       margin-top: 5px; }
   #reviews .container .reviews {
-    display: inline-flex;
-    flex-wrap: nowrap; }
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center; }
     #reviews .container .reviews .review {
+      flex-shrink: 0;
       width: 500px;
       margin: 0 10px;
       border: 1px solid #a5b3c2;
-      padding: 20px;
-      border-top: 5px solid #1dd2af; }
+      opacity: 0.5;
+      padding: 20px; }
+      #reviews .container .reviews .review.selected {
+        border-top: 5px solid #1dd2af;
+        opacity: 1; }
       #reviews .container .reviews .review h5 {
         color: #3ee4c4;
         margin: 3px 0; }

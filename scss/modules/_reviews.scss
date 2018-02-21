@@ -14,14 +14,20 @@
             }
         }
         .reviews {
-            display: inline-flex;
+            display: flex;
             flex-wrap: nowrap;
+            justify-content: center;
             .review {
+                flex-shrink: 0;
                 width: 500px;
                 margin: 0 10px;
                 border: 1px solid #a5b3c2;
+                opacity: 0.5;
                 padding: 20px;
-                border-top: 5px solid $theme-primary-color;
+                &.selected {
+                    border-top: 5px solid $theme-primary-color;
+                    opacity: 1;
+                }
                 h5 {
                     color: lighten($theme-primary-color, 10%);
                     margin: 3px 0;
