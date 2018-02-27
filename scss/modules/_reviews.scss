@@ -1,40 +1,88 @@
 #reviews {
     .container {
         padding-bottom: 60px;
+
         .description {
             text-align: center;
             margin: 50px auto 30px auto;
+
             h4 {
                 color: $theme-secondary-color;
                 text-transform: uppercase;
             }
+
             p {
                 color: #8293a4;
                 margin-top: 5px;
             }
+
         }
+
         .reviews {
             display: flex;
             flex-wrap: nowrap;
             justify-content: center;
+
             .review {
                 flex-shrink: 0;
                 width: 500px;
                 margin: 0 10px;
-                border: 1px solid #a5b3c2;
                 opacity: 0.5;
-                padding: 20px;
+                position: relative;
+                border-top: 2px solid #a5b3c2;
+                
+
                 &.selected {
                     border-top: 5px solid $theme-primary-color;
                     opacity: 1;
+                    transition: all ease 1s;
+
+                    .outer {
+                        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 87% 80%, 81% 100%, 78% 90%, 0 980);
+                        clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 87% 80%, 84% 101%, 78% 80%, 0 80%);
+
+                        .inner {
+                            -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 87% 80%, 81% 100%, 78% 80%, 0 80%);
+                            clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 87% 80%, 84% 99%, 79% 80%, 0 80%);
+                        }
+                    }
+
                 }
-                h5 {
-                    color: lighten($theme-primary-color, 10%);
-                    margin: 3px 0;
+
+                .outer {
+                    position:relative;
+                    background: #a5b3c2;
+                    width: 100%;
+                    height: 100%;
+                    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 87% 80%, 81% 100%, 78% 90%, 0 980);
+                    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 87% 80%, 79% 101%, 78% 80%, 0 80%);
+                    transition: all ease 1s;
+                    
+                    .inner {
+                        padding: 20px;
+                        padding-bottom: 40px;
+                        position: relative;
+                        background:white;
+                        margin: 0 auto;
+                        width: calc(100% - 3px);
+                        height: calc(100% - 1px);
+                        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 87% 80%, 81% 100%, 78% 80%, 0 80%);
+                        clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 87% 80%, 80% 99%, 79% 80%, 0 80%);
+                        transition: all ease 1s;
+                        
+
+                        h5 {
+                            color: lighten($theme-primary-color, 10%);
+                            margin: 3px 0;
+                        }
+        
+                        h6.location {
+                            color: rgb(165, 165, 165);
+                        }
+
+                    }
                 }
-                h6.location {
-                    color: rgb(165, 165, 165);
-                }
+
             }
         }
     }
