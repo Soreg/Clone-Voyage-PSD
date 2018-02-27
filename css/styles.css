@@ -241,7 +241,8 @@ header {
   #specials .packages {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    height: 300px; }
     #specials .packages .package {
       border-radius: 5px;
       padding: 5px;
