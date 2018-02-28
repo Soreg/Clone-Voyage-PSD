@@ -2,7 +2,8 @@
 $(document).ready(function(){
 
     // Preload all images before loading
-    $("body").hide();
+    var fadeTime = 1000;
+    $("body").css("overflow-y", "hidden");
     var total_images = $("body img").length;
     var images_loaded = 0;
     $("body").find('img').each(function() {
@@ -10,8 +11,11 @@ $(document).ready(function(){
         $("<img/>").attr("src", fakeSrc).css('display', 'none').on('load', function() {
             images_loaded++;
             if (images_loaded >= total_images) {
-                // now all images are loaded.
-                $("body").show();
+                // When images are loaded
+                $("body").css("overflow-y", "scroll");
+                $( ".preloader" ).fadeOut(fadeTime, function() {
+                    $(".preloader").css("display", "none");
+                });
             }
         });
     });
