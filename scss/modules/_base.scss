@@ -9,6 +9,10 @@ body {
     overflow-x: hidden;    
 }
 
+img {
+    object-fit: cover;
+}
+
 // fonts
 h2 {
     text-transform: uppercase;
