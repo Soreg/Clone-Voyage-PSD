@@ -27,15 +27,13 @@ $(document).ready(function(){
     })
 
 
-// When clicking on holidays package (change class)
-$("#holiday-type .package").click(function() {
-    var imgToDisplay = $(this).attr("data-image");
-    
-    $("#holiday-type .package").removeClass("selected");
-    $(this).addClass("selected");
-    
-    $("#holiday-type").css("background-image", "url(" + imgToDisplay + ")");
-});
+    // When clicking on holidays package (change class)
+    $("#holiday-type .package").click(function() {
+        var package = $(this).closest(".package");
+        
+        $("#holiday-type .package").removeClass("selected");
+        package.addClass("selected");
+    });
 
 // start sliders
 StartMainSlider();

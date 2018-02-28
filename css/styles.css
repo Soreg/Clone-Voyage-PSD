@@ -322,24 +322,26 @@ header {
   position: relative;
   height: 450px;
   overflow: hidden;
-  background: url("../../img/holiday-types/cruise.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   z-index: 0;
-  transition: all .3s linear; }
+  background: #2c3e50; }
   #holiday-type .container {
     padding: 60px;
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 2; }
-    #holiday-type .container .description h4 {
-      text-transform: uppercase;
-      color: white; }
-    #holiday-type .container .description p {
-      color: #8293a4;
-      margin-top: 5px; }
+    #holiday-type .container .description {
+      position: relative;
+      z-index: 2; }
+      #holiday-type .container .description h4 {
+        text-transform: uppercase;
+        color: white; }
+      #holiday-type .container .description p {
+        color: #b7c1cc;
+        margin-top: 5px; }
     #holiday-type .container .packages {
       width: 1100px;
       margin: 60px auto 0 auto;
@@ -349,21 +351,52 @@ header {
       #holiday-type .container .packages .package {
         max-width: 150px;
         max-height: 150px; }
+        #holiday-type .container .packages .package .background-image {
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all ease .5s; }
+          #holiday-type .container .packages .package .background-image img {
+            min-width: 100%;
+            min-height: 100%;
+            opacity: 0;
+            transition: all ease .5s; }
+        #holiday-type .container .packages .package .overlay {
+          top: 0;
+          left: 0; }
         #holiday-type .container .packages .package .icon {
-          z-index: 1;
+          position: relative;
+          z-index: 2;
           border: 4px solid white;
           border-radius: 50%;
           width: 150px;
-          height: 150px; }
+          height: 150px;
+          transition: all ease .2s; }
         #holiday-type .container .packages .package p {
+          position: relative;
+          z-index: 2;
           margin-top: 10px;
-          color: #8293a4; }
+          color: #b7c1cc;
+          transition: all ease .2s; }
+        #holiday-type .container .packages .package.selected .background-image {
+          opacity: 1; }
         #holiday-type .container .packages .package:hover, #holiday-type .container .packages .package.selected {
           cursor: pointer; }
           #holiday-type .container .packages .package:hover .icon, #holiday-type .container .packages .package.selected .icon {
             border-color: #1dd2af; }
           #holiday-type .container .packages .package:hover p, #holiday-type .container .packages .package.selected p {
             color: #1dd2af; }
+        #holiday-type .container .packages .package.selected .background-image {
+          z-index: 1; }
+          #holiday-type .container .packages .package.selected .background-image img {
+            opacity: 1; }
   @media screen and (max-width: 1200px) {
     #holiday-type {
       height: 700px; }
