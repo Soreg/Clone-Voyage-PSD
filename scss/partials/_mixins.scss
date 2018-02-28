@@ -4,6 +4,7 @@
     height: 100%;
     background: $theme-overlay-color;
     z-index: 1;
+    cursor: default;
 }
 
 @mixin button($radius, $font-size:15px) {
