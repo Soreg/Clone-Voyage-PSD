@@ -247,7 +247,7 @@ header {
           margin: 10px auto; } }
 
 #specials {
-  padding-bottom: 150px; }
+  padding-bottom: 50px; }
   #specials .description {
     text-align: center;
     margin: 60px auto 50px auto; }
@@ -260,14 +260,15 @@ header {
   #specials .packages {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: wrap; }
     #specials .packages .package {
       border-radius: 5px;
       padding: 5px;
-      width: 300px;
+      width: 270px;
       border: 1px solid #eeeeee;
       background: #eeeeee;
-      margin: 0 15px;
+      margin: 0 15px 60px 15px;
       height: 260px;
       transition: all ease .3s; }
       #specials .packages .package .img-container {
@@ -300,25 +301,30 @@ header {
         border-color: #1dd2af;
         background: #1dd2af;
         height: 300px;
-        margin: -40px 15px;
+        margin: 0 15px 20px 15px;
         cursor: pointer; }
         #specials .packages .package:hover .details {
           background: #2c3e50; }
           #specials .packages .package:hover .details p:first-child {
             color: white; }
   @media screen and (max-width: 1500px) {
-    #specials .packages {
-      width: 1000px;
-      margin: 0 auto;
-      flex-wrap: wrap; }
-      #specials .packages .package {
-        margin-bottom: 30px; } }
+    #specials {
+      padding-bottom: 50px; }
+      #specials .packages {
+        width: 1000px;
+        margin: 0 auto;
+        flex-wrap: wrap; }
+        #specials .packages .package {
+          width: 300px;
+          margin-bottom: 60px; } }
   @media screen and (max-width: 1000px) {
     #specials .packages {
       width: 670px; } }
   @media screen and (max-width: 700px) {
     #specials .packages {
-      width: 300px; } }
+      width: 300px; }
+      #specials .packages .package:hover {
+        margin: -40px 15px 60px 15px; } }
 
 #holiday-type {
   width: 100%;

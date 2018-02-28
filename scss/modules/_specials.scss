@@ -1,5 +1,5 @@
 #specials {
-    padding-bottom: 150px;
+    padding-bottom: 50px;
     .description {
         text-align: center;
         margin: 60px auto 50px auto;
@@ -16,13 +16,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap; // change
         .package {
             border-radius: 5px;
             padding: 5px;
-            width: 300px;
+            width: 270px;
             border: 1px solid #eeeeee;
             background: #eeeeee;
-            margin: 0 15px;
+            margin: 0 15px 60px 15px;
             height: 260px;
             transition: all ease .3s;
 
@@ -66,7 +67,7 @@
                 border-color: $theme-primary-color;
                 background: $theme-primary-color;
                 height: 300px;
-                margin: -40px 15px;
+                margin: 0 15px 20px 15px;
 
                 cursor: pointer;
                 .details {
@@ -79,12 +80,14 @@
         }
     }
     @media screen and (max-width: 1500px) {
+        padding-bottom: 50px;
         .packages {
             width: 1000px;
             margin: 0 auto;
             flex-wrap: wrap;
             .package {
-                margin-bottom: 30px;
+                width: 300px;
+                margin-bottom: 60px;
             }
         }
     }
@@ -96,6 +99,10 @@
     @media screen and (max-width: 700px) {
         .packages {
             width: 300px;
+
+            .package:hover {
+                margin: -40px 15px 60px 15px;
+            }
         }
     }
 }
