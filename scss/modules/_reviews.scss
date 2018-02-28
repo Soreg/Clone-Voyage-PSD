@@ -1,6 +1,8 @@
 #reviews {
     .container {
         padding-bottom: 60px;
+        width: 100vw;
+        overflow: hidden;
 
         .description {
             text-align: center;
@@ -25,7 +27,7 @@
 
             .review {
                 flex-shrink: 0;
-                width: 500px;
+                max-width: 500px;
                 margin: 0 10px;
                 opacity: 0.5;
                 position: relative;
@@ -86,4 +88,41 @@
             }
         }
     }
+
+    @media screen and (max-width: 1200px) {
+        .container .reviews {
+            .review {
+                max-width: 400px;
+
+                .outer .inner {
+                    padding-bottom: 50px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 730px) {
+        .container .reviews {
+            .review {
+                max-width: 300px;
+
+                .outer .inner {
+                    padding-bottom: 60px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 300px) {
+        .container .reviews {
+            .review {
+                max-width: 240px;
+
+                .outer .inner {
+                    padding-bottom: 70px;
+                }
+            }
+        }
+    }
+    
 }

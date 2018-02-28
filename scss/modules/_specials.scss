@@ -16,7 +16,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 300px;
         .package {
             border-radius: 5px;
             padding: 5px;
@@ -67,6 +66,8 @@
                 border-color: $theme-primary-color;
                 background: $theme-primary-color;
                 height: 300px;
+                margin: -40px 15px;
+
                 cursor: pointer;
                 .details {
                     background: $theme-secondary-color;
