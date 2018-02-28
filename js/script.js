@@ -12,8 +12,8 @@ $(document).ready(function(){
             images_loaded++;
             if (images_loaded >= total_images) {
                 // When images are loaded
-                $("body").css("overflow-y", "scroll");
                 $( ".preloader" ).fadeOut(fadeTime, function() {
+                    $("body").css("overflow-y", "scroll");
                     $(".preloader").css("display", "none");
                 });
             }
@@ -30,7 +30,7 @@ $(document).ready(function(){
     // When clicking on holidays package (change class)
     $("#holiday-type .package").click(function() {
         var package = $(this).closest(".package");
-        
+
         $("#holiday-type .package").removeClass("selected");
         package.addClass("selected");
     });
