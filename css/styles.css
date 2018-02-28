@@ -168,9 +168,9 @@ header {
 #slider-section .search-slider {
   width: 100%;
   background: #2c3e50;
-  display: flex; }
+  display: flex;
+  justify-content: center; }
   #slider-section .search-slider .headline-area {
-    width: 25%;
     border-right: 1px solid #8293a4;
     padding: 20px; }
     #slider-section .search-slider .headline-area .text {

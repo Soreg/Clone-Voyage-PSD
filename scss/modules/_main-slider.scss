@@ -96,8 +96,8 @@
         width: 100%;
         background: $theme-secondary-color;
         display: flex;
+        justify-content: center;
         .headline-area {
-            width: 25%;
             border-right: 1px solid #8293a4;
             padding: 20px;
             .text {
