@@ -98,6 +98,7 @@ header {
   overflow: hidden;
   position: relative; }
   #slider-section .slider .slider-arrow {
+    user-select: none;
     z-index: 3;
     position: absolute;
     width: 80px;
