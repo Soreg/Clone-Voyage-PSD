@@ -15,12 +15,20 @@ footer {
 
             ul { // Navbar
                 display: flex;
+                flex-wrap:wrap;
                 align-items: center;
                 justify-content: center;
                 text-decoration: none;
 
+                @media only screen and (max-width : 650px) {
+                    width: 400px;
+                }
+
+                @media only screen and (max-width : 650px) {
+                    width: 280px;
+                }
+
                 li {
-                    float: left;
                     float: left;
                     list-style-type: none;
                     margin-left: 20px;
@@ -33,6 +41,25 @@ footer {
 
                     &:last-child:after {
                         content: "";
+                    }
+
+                    @media only screen and (max-width : 800px) {
+                        margin: 3px 0px;
+                        width: 25%;
+                        text-align: center;
+
+                        &:after {
+                            content: "";
+                        }
+
+                    }
+
+                    @media only screen and (max-width : 650px) {
+                        width: 40%;
+                    }
+
+                    @media only screen and (max-width : 650px) {
+                        width: 100%;
                     }
 
                     a {

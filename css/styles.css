@@ -512,12 +512,27 @@ footer #footer-content {
   border-bottom: 1px solid #394c5f; }
   footer #footer-content .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     width: 1300px;
     height: 100%;
     padding: 50px 0; }
+    @media only screen and (max-width: 1300px) {
+      footer #footer-content .container {
+        width: 1000px; } }
+    @media only screen and (max-width: 1040px) {
+      footer #footer-content .container {
+        padding-bottom: 0; } }
     footer #footer-content .container .content-child {
       width: 20%; }
+      @media only screen and (max-width: 1040px) {
+        footer #footer-content .container .content-child {
+          width: 45%;
+          text-align: center;
+          margin-bottom: 50px; } }
+      @media only screen and (max-width: 800px) {
+        footer #footer-content .container .content-child {
+          width: 70%; } }
       footer #footer-content .container .content-child p {
         color: white; }
       footer #footer-content .container .content-child h3 {
@@ -551,6 +566,14 @@ footer #footer-content {
           padding: 10px;
           margin-left: -10px;
           transition: all ease .3s; }
+          @media only screen and (max-width: 1040px) {
+            footer #footer-content .container .content-child.news .news-content {
+              justify-content: center; } }
+          @media only screen and (max-width: 800px) {
+            footer #footer-content .container .content-child.news .news-content {
+              flex-direction: column;
+              align-items: center;
+              margin-left: 0; } }
           footer #footer-content .container .content-child.news .news-content:hover {
             background: #233140;
             margin-left: 0;
@@ -566,6 +589,12 @@ footer #footer-content {
               height: 100%; }
           footer #footer-content .container .content-child.news .news-content .text {
             width: calc(100% - 50px); }
+            @media only screen and (max-width: 1040px) {
+              footer #footer-content .container .content-child.news .news-content .text {
+                width: calc(100% - 100px); } }
+            @media only screen and (max-width: 800px) {
+              footer #footer-content .container .content-child.news .news-content .text {
+                margin-top: 10px; } }
             footer #footer-content .container .content-child.news .news-content .text p:first-child {
               line-height: 20px; }
             footer #footer-content .container .content-child.news .news-content .text .date {
@@ -579,6 +608,9 @@ footer #footer-content {
           display: flex;
           flex-wrap: wrap;
           margin-top: 20px; }
+          @media only screen and (max-width: 1040px) {
+            footer #footer-content .container .content-child.tags .tags-container {
+              justify-content: center; } }
           footer #footer-content .container .content-child.tags .tags-container .tag {
             border: 1px solid white;
             padding: 5px 8px;
@@ -624,11 +656,17 @@ footer #copyright-footer {
     align-items: center; }
     footer #copyright-footer .container ul {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       text-decoration: none; }
+      @media only screen and (max-width: 650px) {
+        footer #copyright-footer .container ul {
+          width: 400px; } }
+      @media only screen and (max-width: 650px) {
+        footer #copyright-footer .container ul {
+          width: 280px; } }
       footer #copyright-footer .container ul li {
-        float: left;
         float: left;
         list-style-type: none;
         margin-left: 20px; }
@@ -638,6 +676,19 @@ footer #copyright-footer {
           color: white; }
         footer #copyright-footer .container ul li:last-child:after {
           content: ""; }
+        @media only screen and (max-width: 800px) {
+          footer #copyright-footer .container ul li {
+            margin: 3px 0px;
+            width: 25%;
+            text-align: center; }
+            footer #copyright-footer .container ul li:after {
+              content: ""; } }
+        @media only screen and (max-width: 650px) {
+          footer #copyright-footer .container ul li {
+            width: 40%; } }
+        @media only screen and (max-width: 650px) {
+          footer #copyright-footer .container ul li {
+            width: 100%; } }
         footer #copyright-footer .container ul li a {
           color: white;
           text-decoration: none;

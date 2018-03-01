@@ -7,13 +7,32 @@ footer {
 
         .container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             width: $main-container-width;
             height: 100%;
             padding: 50px 0;
 
+            @media only screen and (max-width : 1300px) {
+                width: 1000px;
+            }
+
+            @media only screen and (max-width : 1040px) {
+                padding-bottom: 0;
+            }
+
             .content-child {
                 width: 20%;
+
+                @media only screen and (max-width : 1040px) {
+                    width: 45%;
+                    text-align: center;
+                    margin-bottom: 50px;
+                }
+
+                @media only screen and (max-width : 800px) {
+                    width: 70%;
+                }
 
                 p {
                     color: white;
@@ -70,6 +89,18 @@ footer {
                         margin-left: -10px;
                         transition: all ease .3s;
 
+                        @media only screen and (max-width : 1040px) {
+                            justify-content: center;
+                        }
+
+                        @media only screen and (max-width : 800px) {
+                            flex-direction: column;
+                            align-items: center;
+                            margin-left: 0;
+                        }
+
+                        
+
                         &:hover {
                             background: darken($theme-secondary-color, 5%);
                             margin-left: 0;
@@ -92,6 +123,14 @@ footer {
 
                         .text {
                             width: calc(100% - 50px);
+
+                            @media only screen and (max-width : 1040px) {
+                                width: calc(100% - 100px);
+                            }
+
+                            @media only screen and (max-width : 800px) {
+                                margin-top: 10px;
+                            }
 
                             p:first-child {
                                 line-height: 20px;
@@ -117,6 +156,10 @@ footer {
                         display: flex;
                         flex-wrap: wrap;
                         margin-top: 20px;
+
+                        @media only screen and (max-width : 1040px) {
+                            justify-content: center;
+                        }
 
                         .tag {
                             border: 1px solid white;
