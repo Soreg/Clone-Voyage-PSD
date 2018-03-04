@@ -63,6 +63,7 @@
                     border-left: 1px solid #a5b3c2;
                     border-right: 1px solid #a5b3c2;
                     border-bottom: 1px solid #a5b3c2;
+                    transition: inherit;
 
                     &:before {
                         width: 0;
@@ -75,6 +76,7 @@
                         right: 40px;
                         bottom: -40px;
                         z-index: 1;
+                        transition: inherit;
                     }
 
                     &:after {
@@ -87,6 +89,7 @@
                         content: " ";
                         right: 42px;
                         z-index: 2;
+                        transition: inherit;
                     }
                     
                     .inner {

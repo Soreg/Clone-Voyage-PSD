@@ -469,7 +469,8 @@ header {
         height: 100%;
         border-left: 1px solid #a5b3c2;
         border-right: 1px solid #a5b3c2;
-        border-bottom: 1px solid #a5b3c2; }
+        border-bottom: 1px solid #a5b3c2;
+        transition: inherit; }
         #reviews .container .reviews .review .outer:before {
           width: 0;
           height: 0;
@@ -480,7 +481,8 @@ header {
           content: " ";
           right: 40px;
           bottom: -40px;
-          z-index: 1; }
+          z-index: 1;
+          transition: inherit; }
         #reviews .container .reviews .review .outer:after {
           width: 0;
           height: 0;
@@ -490,7 +492,8 @@ header {
           position: absolute;
           content: " ";
           right: 42px;
-          z-index: 2; }
+          z-index: 2;
+          transition: inherit; }
         #reviews .container .reviews .review .outer .inner {
           padding: 20px;
           background: white;

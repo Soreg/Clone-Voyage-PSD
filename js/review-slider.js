@@ -4,6 +4,16 @@ var StartReviewSlider = function() {
     var currentElement;
     var slider = $("#reviews .reviews");
 
+    var sliderAnimationTime = 1500;
+    var sliderAnimationTimeSeconds = sliderAnimationTime / 1000;
+    var sliderTimeBetweenSlides = 7000;
+
+    // set css transition time
+    $("#reviews .review").css("transition", "all ease " + sliderAnimationTimeSeconds + "s");
+
+    console.log(sliderAnimationTimeSeconds);
+    
+
     // Find currently active review, and set to start index
     $.each(reviews, function(i) { 
         if($(this).hasClass("selected")) {
@@ -32,19 +42,13 @@ var StartReviewSlider = function() {
     var slideTimer = setInterval(function() {
             currentElement.removeClass("selected");
             nextElement.addClass("selected");
-            var scrollAmount = currentElement.outerWidth(true) * 2;
-        slider.animate({"margin-left": "-=" + scrollAmount}, 1500, function() {
+
+            var scrollAmount = currentElement.outerWidth(true) * 2; // calculate scroll amount
+
+        slider.animate({"margin-left": "-=" + scrollAmount}, sliderAnimationTime, function() {
             ReviewSliderLogic();
         });
+
     }, 7000);
-
-    // Go into setinterval
-    // Add Copy first element, and add it to end
-    // remove selected class
-    // add selected class to next element
-    // go to next element
-    // remove last element
-
-    
     
 }
