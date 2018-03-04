@@ -452,8 +452,7 @@ header {
       border-top: 2px solid #a5b3c2; }
       #reviews .container .reviews .review.selected {
         border-top: 5px solid #1dd2af;
-        opacity: 1;
-        transition: all ease 1s; }
+        opacity: 1; }
         #reviews .container .reviews .review.selected .outer:before {
           border-left: 35px solid transparent;
           border-right: 25px solid transparent;
@@ -468,7 +467,6 @@ header {
         background: #a5b3c2;
         width: 100%;
         height: 100%;
-        transition: all ease 1s;
         border-left: 1px solid #a5b3c2;
         border-right: 1px solid #a5b3c2;
         border-bottom: 1px solid #a5b3c2; }
@@ -482,8 +480,7 @@ header {
           content: " ";
           right: 40px;
           bottom: -40px;
-          z-index: 1;
-          transition: all ease 1s; }
+          z-index: 1; }
         #reviews .container .reviews .review .outer:after {
           width: 0;
           height: 0;
@@ -493,8 +490,7 @@ header {
           position: absolute;
           content: " ";
           right: 42px;
-          z-index: 2;
-          transition: all ease 1s; }
+          z-index: 2; }
         #reviews .container .reviews .review .outer .inner {
           padding: 20px;
           background: white;
