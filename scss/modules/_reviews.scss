@@ -31,7 +31,7 @@
                 margin: 0 10px;
                 opacity: 0.5;
                 position: relative;
-                border-top: 2px solid #a5b3c2;
+                border-top: 1px solid #a5b3c2;
                 
                 
 
@@ -52,6 +52,11 @@
                             border-right: 23px solid transparent;
                             border-top: 28px solid white;
                         }
+
+                        .inner {
+                            padding-top: 20px;
+                        }
+
                     }
                 }
 
@@ -93,10 +98,11 @@
                     }
                     
                     .inner {
-                        padding: 20px;
+                        padding: 24px;
                         background:white;
                         width: 100%;
                         height: 100%;
+                        transition: inherit;
                         
 
                         h5 {

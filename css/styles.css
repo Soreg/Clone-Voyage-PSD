@@ -449,7 +449,7 @@ header {
       margin: 0 10px;
       opacity: 0.5;
       position: relative;
-      border-top: 2px solid #a5b3c2; }
+      border-top: 1px solid #a5b3c2; }
       #reviews .container .reviews .review.selected {
         border-top: 5px solid #1dd2af;
         opacity: 1; }
@@ -462,6 +462,8 @@ header {
           border-left: 33px solid transparent;
           border-right: 23px solid transparent;
           border-top: 28px solid white; }
+        #reviews .container .reviews .review.selected .outer .inner {
+          padding-top: 20px; }
       #reviews .container .reviews .review .outer {
         position: relative;
         background: #a5b3c2;
@@ -495,10 +497,11 @@ header {
           z-index: 2;
           transition: inherit; }
         #reviews .container .reviews .review .outer .inner {
-          padding: 20px;
+          padding: 24px;
           background: white;
           width: 100%;
-          height: 100%; }
+          height: 100%;
+          transition: inherit; }
           #reviews .container .reviews .review .outer .inner h5 {
             color: #3ee4c4;
             margin: 3px 0; }
