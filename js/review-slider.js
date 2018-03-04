@@ -11,9 +11,7 @@ var StartReviewSlider = function() {
     // set css transition time
     $("#reviews .review").css("transition", "all ease " + sliderAnimationTimeSeconds + "s");
 
-    console.log(sliderAnimationTimeSeconds);
     
-
     // Find currently active review, and set to start index
     $.each(reviews, function(i) { 
         if($(this).hasClass("selected")) {
