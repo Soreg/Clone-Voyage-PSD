@@ -639,7 +639,8 @@ footer #footer-content {
               color: #3ee4c4;
               background: #354b60;
               cursor: pointer;
-              box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.5); }
+              box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.5);
+              transform: translate(-2px, -2px); }
       footer #footer-content .container .content-child.address {
         display: flex;
         flex-direction: column; }
@@ -651,13 +652,16 @@ footer #footer-content {
               color: #1dd2af; }
             footer #footer-content .container .content-child.address .text p.email span:nth-child(even) {
               padding: 5px 0;
-              transition: all ease .3s; }
+              transition: all ease .3s;
+              padding: 5px;
+              margin-left: -5px;
+              border: 1px solid transparent; }
               footer #footer-content .container .content-child.address .text p.email span:nth-child(even):hover {
                 background: #354b60;
-                padding: 5px;
-                border: 1px solid #1dd2af;
                 color: #1dd2af;
+                border-color: #1dd2af;
                 box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+                margin-left: 0;
                 cursor: pointer; }
 
 footer #copyright-footer {
