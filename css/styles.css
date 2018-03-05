@@ -386,6 +386,9 @@ header {
           top: 0;
           left: 0; }
         #holiday-type .container .packages .package .icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
           position: relative;
           z-index: 2;
           border: 4px solid white;
@@ -393,6 +396,12 @@ header {
           width: 150px;
           height: 150px;
           transition: all ease .2s; }
+          #holiday-type .container .packages .package .icon img {
+            transition: all ease .2s;
+            width: 70%;
+            position: absolute; }
+            #holiday-type .container .packages .package .icon img.top {
+              opacity: 0; }
         #holiday-type .container .packages .package p {
           position: relative;
           z-index: 2;
@@ -401,10 +410,18 @@ header {
           transition: all ease .2s; }
         #holiday-type .container .packages .package.selected .background-image {
           opacity: 1; }
+        #holiday-type .container .packages .package.selected .icon img.bottom {
+          opacity: 0; }
+        #holiday-type .container .packages .package.selected .icon img.top {
+          opacity: 1; }
         #holiday-type .container .packages .package:hover, #holiday-type .container .packages .package.selected {
           cursor: pointer; }
           #holiday-type .container .packages .package:hover .icon, #holiday-type .container .packages .package.selected .icon {
             border-color: #1dd2af; }
+            #holiday-type .container .packages .package:hover .icon img.bottom, #holiday-type .container .packages .package.selected .icon img.bottom {
+              opacity: 0; }
+            #holiday-type .container .packages .package:hover .icon img.top, #holiday-type .container .packages .package.selected .icon img.top {
+              opacity: 1; }
           #holiday-type .container .packages .package:hover p, #holiday-type .container .packages .package.selected p {
             color: #1dd2af; }
         #holiday-type .container .packages .package.selected .background-image {
