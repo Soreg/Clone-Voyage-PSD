@@ -59,4 +59,27 @@ preloadImages();
 StartMainSlider();
 StartReviewSlider();
 
+
+// Burger menu on-click
+$(".burger-menu").click(function() {
+    var burgerMenu = $(this);
+    var navbar = $(".navbar nav");
+    
+
+    if(burgerMenu.hasClass("expanded")) {
+        burgerMenu.removeClass("expanded");
+        navbar.removeClass("expanded");
+        $("body").css("overflow-y", "scroll");
+    } else {
+        burgerMenu.addClass("expanded");
+        navbar.addClass("expanded")
+        $("body").css("overflow-y", "hidden");
+    }
+});
+
+$("nav ul li a").click(function() {
+    $("nav").removeClass("expanded");
+    $(".burger-menu").removeClass("expanded");
+})
+
 });
