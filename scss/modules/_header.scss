@@ -1,5 +1,6 @@
 header {
     background: white;
+
     .container {
         margin: 0 auto;
         width: $main-container-width;
@@ -7,52 +8,80 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         .logo {
-            width: 100px;
-            height: 30px;
-            background: red;
+            a {
+                text-decoration: none;
+
+                h1 {
+                    color: $theme-secondary-color;
+                    font-size: 40px;
+                    font-weight: bolder;
+    
+                    span {
+                        color: $theme-primary-color;
+                    }
+    
+                }
+            }
         }
+
         .navbar nav { // Navbar
             display: flex;
             flex-direction: row;
+
             ul {
                 display: flex;
                 align-items: center;
+
                 li {
                     float: left;
                     list-style-type: none;
                     margin-left: 30px;
+
                     a {
                         text-decoration: none;
                         text-transform: uppercase;
-                        font-size: 18px;
+                        font-size: 16px;
                         font-weight: bold;
                         color: #5d6e80;
                         transition: color ease .2s;
+                        font-weight: bolder;
 
                         &:hover {
                             color: $theme-primary-color;
                         }
+
+                        &.selected {
+                            color: $theme-primary-color;
+                        }
+
                     }
                 }
             }
+
             .search {
                 img {
                     max-height: 40px;
                     margin-left: 30px;
+
                     &:hover {
                         cursor: pointer;
                     }
+
                 }
             }
         }
     }
+
     @media screen and (max-width: 1400px) {
         .container {
             width: 100%;
+
             .logo, .navbar nav {
                 display: none;
             }
+
         }
     }
 }

@@ -59,10 +59,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between; }
-    header .container .logo {
-      width: 100px;
-      height: 30px;
-      background: red; }
+    header .container .logo a {
+      text-decoration: none; }
+      header .container .logo a h1 {
+        color: #2c3e50;
+        font-size: 40px;
+        font-weight: bolder; }
+        header .container .logo a h1 span {
+          color: #1dd2af; }
     header .container .navbar nav {
       display: flex;
       flex-direction: row; }
@@ -76,11 +80,14 @@ header {
           header .container .navbar nav ul li a {
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             color: #5d6e80;
-            transition: color ease .2s; }
+            transition: color ease .2s;
+            font-weight: bolder; }
             header .container .navbar nav ul li a:hover {
+              color: #1dd2af; }
+            header .container .navbar nav ul li a.selected {
               color: #1dd2af; }
       header .container .navbar nav .search img {
         max-height: 40px;
