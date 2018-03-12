@@ -128,7 +128,7 @@ header {
             }
 
             .navbar nav {
-                z-index: 10;
+                z-index: 0;
                 width: 100%;
                 position: absolute;
                 top: $header-height;
@@ -170,6 +170,7 @@ header {
                 }
 
                 &.expanded {
+                    z-index: 4;
                     opacity: 1;
                     border-color: $theme-secondary-color;
                 }
