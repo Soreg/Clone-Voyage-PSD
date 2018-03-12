@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+.page_container, header .container {
+  max-width: 1500px;
+  width: 90%;
+  margin: auto; }
+
 * {
   margin: 0;
   padding: 0;
@@ -53,12 +58,11 @@ p {
 header {
   background: white; }
   header .container {
-    margin: 0 auto;
-    width: 1300px;
     height: 100px;
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-wrap: wrap; }
     header .container .logo a {
       text-decoration: none; }
       header .container .logo a h1 {
@@ -67,16 +71,45 @@ header {
         font-weight: bolder; }
         header .container .logo a h1 span {
           color: #1dd2af; }
+    header .container .burger-menu {
+      opacity: 0;
+      display: block;
+      position: absolute;
+      top: 35px;
+      right: 30px;
+      height: 26px; }
+      header .container .burger-menu div {
+        width: 35px;
+        height: 3px;
+        background-color: #507192; }
+      header .container .burger-menu div:nth-child(2) {
+        margin: 6px 0; }
+      header .container .burger-menu.expanded {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        header .container .burger-menu.expanded div:first-child {
+          transform-origin: top right;
+          transform: rotate(-45deg); }
+        header .container .burger-menu.expanded div:nth-child(2) {
+          margin: 0;
+          opacity: 0; }
+        header .container .burger-menu.expanded div:last-child {
+          transform-origin: bottom right;
+          transform: rotate(45deg); }
     header .container .navbar nav {
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      transition: all ease .3s; }
       header .container .navbar nav ul {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        transition: inherit; }
         header .container .navbar nav ul li {
           float: left;
           list-style-type: none;
-          margin-left: 30px; }
+          margin-left: 30px;
+          transition: inherit; }
           header .container .navbar nav ul li a {
             text-decoration: none;
             text-transform: uppercase;
@@ -84,21 +117,60 @@ header {
             font-weight: bold;
             color: #5d6e80;
             transition: color ease .2s;
-            font-weight: bolder; }
+            font-weight: bolder;
+            transition: inherit; }
             header .container .navbar nav ul li a:hover {
               color: #1dd2af; }
             header .container .navbar nav ul li a.selected {
               color: #1dd2af; }
-      header .container .navbar nav .search img {
-        max-height: 40px;
-        margin-left: 30px; }
-        header .container .navbar nav .search img:hover {
-          cursor: pointer; }
-  @media screen and (max-width: 1400px) {
+      header .container .navbar nav .search {
+        transition: inherit; }
+        header .container .navbar nav .search img {
+          max-height: 40px;
+          margin-left: 30px; }
+          header .container .navbar nav .search img:hover {
+            cursor: pointer; }
+  @media screen and (max-width: 960px) {
     header .container {
-      width: 100%; }
-      header .container .logo, header .container .navbar nav {
-        display: none; } }
+      flex-direction: column;
+      width: 100%;
+      justify-content: center; }
+      header .container .burger-menu {
+        opacity: 1; }
+      header .container .navbar nav {
+        z-index: 10;
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        background: white;
+        left: 0;
+        opacity: 0;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column-reverse;
+        transition: inherit;
+        padding: 10px 0;
+        border-top: 1px solid transparent;
+        min-height: calc(100vh - 100px);
+        transition: all ease .3s; }
+        header .container .navbar nav ul {
+          flex-direction: column;
+          align-self: center;
+          margin: 10px auto;
+          transition: inherit; }
+          header .container .navbar nav ul li {
+            padding: 5px 0;
+            margin: 0; }
+            header .container .navbar nav ul li a {
+              font-size: 20px; }
+        header .container .navbar nav .search {
+          text-align: center;
+          transition: inherit; }
+          header .container .navbar nav .search img {
+            margin: 0; }
+        header .container .navbar nav.expanded {
+          opacity: 1;
+          border-color: #2c3e50; } }
 
 #slider-section .slider {
   max-height: 850px;

@@ -2,12 +2,12 @@ header {
     background: white;
 
     .container {
-        margin: 0 auto;
-        width: $main-container-width;
+        @extend .page_container;
         height: $header-height;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         .logo {
             a {
@@ -26,18 +26,63 @@ header {
             }
         }
 
+        .burger-menu {
+            opacity: 0;
+            display: block;
+            position: absolute;
+            top: 35px;
+            right: 30px;
+            height: 26px;
+
+            div {
+                width: 35px;
+                height: 3px;
+                background-color: lighten($theme-secondary-color, 20%);
+            }
+
+
+            div:nth-child(2) {
+                margin: 6px 0;
+            }
+
+            &.expanded {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                
+                div:first-child {
+                    transform-origin: top right;
+                    transform: rotate(-45deg);
+                }
+
+                div:nth-child(2) {
+                    margin: 0;
+                    opacity: 0;
+                }
+
+                div:last-child {
+                    transform-origin: bottom right;
+                    transform: rotate(45deg);
+                }
+            }
+
+        }
+
         .navbar nav { // Navbar
             display: flex;
             flex-direction: row;
+            transition: all ease .3s;
 
             ul {
                 display: flex;
                 align-items: center;
+                transition: inherit;
 
                 li {
                     float: left;
                     list-style-type: none;
                     margin-left: 30px;
+                    transition: inherit;
 
                     a {
                         text-decoration: none;
@@ -47,6 +92,7 @@ header {
                         color: #5d6e80;
                         transition: color ease .2s;
                         font-weight: bolder;
+                        transition: inherit;
 
                         &:hover {
                             color: $theme-primary-color;
@@ -61,6 +107,7 @@ header {
             }
 
             .search {
+                transition: inherit;
                 img {
                     max-height: 40px;
                     margin-left: 30px;
@@ -74,12 +121,62 @@ header {
         }
     }
 
-    @media screen and (max-width: 1400px) {
+    @media screen and (max-width: 960px) {
         .container {
+            flex-direction: column;
             width: 100%;
+            justify-content: center;
 
-            .logo, .navbar nav {
-                display: none;
+            .burger-menu {
+                opacity: 1;
+            }
+
+            .navbar nav {
+                z-index: 10;
+                width: 100%;
+                position: absolute;
+                top: $header-height;
+                background:white;
+                left: 0;
+                opacity: 0;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column-reverse;
+                transition: inherit;
+                padding: 10px 0;
+                border-top: 1px solid transparent;
+                min-height: calc(100vh - #{$header-height});
+                transition: all ease .3s;
+                
+                ul {
+                    flex-direction: column;
+                    align-self: center;
+                    margin: 10px auto;
+                    transition: inherit;
+
+                    li  {
+                        padding: 5px 0;
+                        margin: 0;
+
+                        a {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                .search {
+                    text-align: center;
+                    transition: inherit;
+
+                    img {
+                        margin: 0;
+                    }
+                }
+
+                &.expanded {
+                    opacity: 1;
+                    border-color: $theme-secondary-color;
+                }
             }
 
         }
