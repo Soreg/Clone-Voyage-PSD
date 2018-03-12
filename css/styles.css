@@ -99,17 +99,14 @@ header {
           transform: rotate(45deg); }
     header .container .navbar nav {
       display: flex;
-      flex-direction: row;
-      transition: all ease .3s; }
+      flex-direction: row; }
       header .container .navbar nav ul {
         display: flex;
-        align-items: center;
-        transition: inherit; }
+        align-items: center; }
         header .container .navbar nav ul li {
           float: left;
           list-style-type: none;
-          margin-left: 30px;
-          transition: inherit; }
+          margin-left: 30px; }
           header .container .navbar nav ul li a {
             text-decoration: none;
             text-transform: uppercase;
@@ -117,8 +114,7 @@ header {
             font-weight: bold;
             color: #5d6e80;
             transition: color ease .2s;
-            font-weight: bolder;
-            transition: inherit; }
+            font-weight: bolder; }
             header .container .navbar nav ul li a:hover {
               color: #1dd2af; }
             header .container .navbar nav ul li a.selected {

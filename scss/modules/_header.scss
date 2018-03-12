@@ -71,18 +71,15 @@ header {
         .navbar nav { // Navbar
             display: flex;
             flex-direction: row;
-            transition: all ease .3s;
 
             ul {
                 display: flex;
                 align-items: center;
-                transition: inherit;
 
                 li {
                     float: left;
                     list-style-type: none;
                     margin-left: 30px;
-                    transition: inherit;
 
                     a {
                         text-decoration: none;
@@ -92,7 +89,6 @@ header {
                         color: #5d6e80;
                         transition: color ease .2s;
                         font-weight: bolder;
-                        transition: inherit;
 
                         &:hover {
                             color: $theme-primary-color;
