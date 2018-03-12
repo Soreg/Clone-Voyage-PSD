@@ -812,7 +812,7 @@ footer #copyright-footer {
             width: 25%;
             text-align: center; }
             footer #copyright-footer .container ul li:after {
-              content: ""; } }
+              display: none; } }
         @media only screen and (max-width: 650px) {
           footer #copyright-footer .container ul li {
             width: 40%; } }
