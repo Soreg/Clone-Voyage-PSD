@@ -41,6 +41,7 @@ p {
   cursor: default; }
 
 .preloader {
+  text-align: center;
   position: fixed;
   width: 100%;
   height: 100%;
