@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-.page_container, header .container {
-  max-width: 1500px;
+.page_container, header .container, #slider-section .search-slider .container, #holiday-type .container .packages, footer #footer-content .container {
+  max-width: 1400px;
   width: 90%;
   margin: auto; }
 
@@ -254,9 +254,10 @@ header {
         margin: 10px auto; } }
 #slider-section .search-slider {
   width: 100%;
-  background: #2c3e50;
-  display: flex;
-  justify-content: center; }
+  background: #2c3e50; }
+  #slider-section .search-slider .container {
+    display: flex;
+    justify-content: space-between; }
   #slider-section .search-slider .headline-area {
     border-right: 1px solid #8293a4;
     padding: 20px; }
@@ -269,9 +270,13 @@ header {
       #slider-section .search-slider .headline-area .text h4 {
         color: white; }
   #slider-section .search-slider .input-areas {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-left: 40px; }
+    #slider-section .search-slider .input-areas form {
+      width: 100%; }
     #slider-section .search-slider .input-areas label {
       margin: 0 15px;
       color: #8293a4;
@@ -279,7 +284,8 @@ header {
       font-weight: lighter; }
     #slider-section .search-slider .input-areas input[type="text"] {
       padding: 5px;
-      font-size: 18px; }
+      font-size: 18px;
+      width: 30%; }
     #slider-section .search-slider .input-areas input[type="submit"] {
       margin-left: 20px;
       padding: 15px 20px;
@@ -302,30 +308,33 @@ header {
         cursor: pointer; }
       #slider-section .search-slider .input-areas input[type="submit"]:hover {
         background: #17a58a; }
-  @media screen and (max-width: 1130px) {
-    #slider-section .search-slider {
+  @media screen and (max-width: 1220px) {
+    #slider-section .search-slider .container {
       flex-direction: column; }
-      #slider-section .search-slider .headline-area {
+      #slider-section .search-slider .container .headline-area {
         border-right: none;
         width: 100%; }
-        #slider-section .search-slider .headline-area .text {
+        #slider-section .search-slider .container .headline-area .text {
           float: none;
           text-align: center;
           margin: 0 auto; }
-      #slider-section .search-slider .input-areas {
+      #slider-section .search-slider .container .input-areas {
         margin: 0 auto 30px auto; }
-        #slider-section .search-slider .input-areas form {
-          margin: 0 auto; } }
-  @media screen and (max-width: 830px) {
-    #slider-section .search-slider .input-areas {
+        #slider-section .search-slider .container .input-areas form {
+          margin: 0 auto;
+          width: auto; }
+          #slider-section .search-slider .container .input-areas form input[type="text"] {
+            width: 250px; } }
+  @media screen and (max-width: 900px) {
+    #slider-section .search-slider .container .input-areas {
       width: 100%; }
-      #slider-section .search-slider .input-areas form {
+      #slider-section .search-slider .container .input-areas form {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 80%; }
-        #slider-section .search-slider .input-areas form input[type="text"] {
+        #slider-section .search-slider .container .input-areas form input[type="text"] {
           width: 80%;
           margin: 10px auto; } }
 
@@ -410,7 +419,6 @@ header {
         margin: -40px 15px 60px 15px; } }
 
 #holiday-type {
-  width: 100%;
   text-align: center;
   position: relative;
   height: 450px;
@@ -436,7 +444,6 @@ header {
         color: #b7c1cc;
         margin-top: 5px; }
     #holiday-type .container .packages {
-      width: 1100px;
       margin: 60px auto 0 auto;
       display: flex;
       justify-content: space-around;
@@ -628,7 +635,6 @@ footer #footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 1300px;
     height: 100%;
     padding: 50px 0; }
     @media only screen and (max-width: 1300px) {

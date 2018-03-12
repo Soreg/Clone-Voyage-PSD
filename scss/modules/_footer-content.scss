@@ -6,10 +6,10 @@ footer {
         border-bottom: 1px solid #394c5f;
 
         .container {
+            @extend .page_container;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            width: $main-container-width;
             height: 100%;
             padding: 50px 0;
 

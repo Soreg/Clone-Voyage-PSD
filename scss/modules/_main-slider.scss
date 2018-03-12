@@ -96,8 +96,12 @@
     .search-slider {
         width: 100%;
         background: $theme-secondary-color;
-        display: flex;
-        justify-content: center;
+
+        .container {
+            @extend .page_container;
+            display: flex;
+            justify-content: space-between;
+        }
         .headline-area {
             border-right: 1px solid #8293a4;
             padding: 20px;
@@ -114,9 +118,15 @@
             }
         }
         .input-areas {
+            width: 100%;
             display: flex;
             align-items: center;
+            justify-content: center;
             margin-left: 40px;
+
+            form {
+                width: 100%;
+            }
 
             label {
                 margin: 0 15px;
@@ -127,6 +137,7 @@
             input[type="text"] {
                 padding: 5px;
                 font-size: 18px;
+                width: 30%;
             }
             input[type="submit"] {
                 margin-left: 20px;
@@ -142,40 +153,64 @@
             }
         }
         // media for search-slider 
-        @media screen and (max-width: 1130px) {
-            flex-direction: column;
-            .headline-area {
-                border-right: none;
-                width: 100%;
-                .text {
-                    float: none;
-                    text-align: center;
-                    margin: 0 auto;
-                }
-            }
-            .input-areas {
-                margin: 0 auto 30px auto;
-                form {
-                    margin: 0 auto;
-                }
-            }
-        }
-        @media screen and (max-width: 830px) {
-            .input-areas {
-                width: 100%;
-                form {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    width: 80%;
+        @media screen and (max-width: 1220px) {
+            .container {
+                flex-direction: column;
 
-                    input[type="text"] {
-                        width: 80%;
-                        margin: 10px auto;
+                .headline-area {
+                    border-right: none;
+                    width: 100%;
+
+                    .text {
+                        float: none;
+                        text-align: center;
+                        margin: 0 auto;
+
                     }
                 }
+                .input-areas {
+                    margin: 0 auto 30px auto;
+
+                    form {
+                        margin: 0 auto;
+                        width: auto;
+
+                        input[type="text"] {
+                            width: 250px;
+                        }
+
+                    }
+
+                }
+
             }
+
+            
+        }
+        @media screen and (max-width: 900px) {
+            .container {
+
+                .input-areas {
+                    width: 100%;
+
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 80%;
+
+                        input[type="text"] {
+                            width: 80%;
+                            margin: 10px auto;
+                        }
+
+                    }
+
+                }
+
+            }
+            
         }
     }
 }
