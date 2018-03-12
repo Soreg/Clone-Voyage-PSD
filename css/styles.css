@@ -243,11 +243,18 @@ header {
             cursor: pointer; }
   #slider-section .slider .next-arrow {
     right: 0; }
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 1100px) {
+    #slider-section .slider .slider-arrow {
+      width: 60px;
+      height: 60px; } }
+  @media screen and (max-width: 750px) {
     #slider-section .slider .slide .description .slider-buttons {
       flex-direction: column; }
       #slider-section .slider .slide .description .slider-buttons .btn {
-        margin: 10px auto; } }
+        margin: 10px auto; }
+    #slider-section .slider .slider-arrow {
+      width: 40px;
+      height: 40px; } }
 #slider-section .search-slider {
   width: 100%;
   background: #2c3e50; }
