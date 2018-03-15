@@ -1,24 +1,19 @@
 $(document).ready(function(){
 
-    var totalSlidesToLoad = ($(".main-slider-img").length);
+    // Preload slider images first (Required for JS to work due to Lazyload)
+    var sliderImgsToLoad = ($(".main-slider-img"));
+    $(function() {
+        for (var i = 0; i < sliderImgsToLoad.length; i++) {
+            $("<img />").attr("src", sliderImgsToLoad[i]);
+        }
+        StartMainSlider();
+    });
+
     
-    var totalSlidesLoaded = 0;
     
 
     $(function() {
-        $('.lazy').lazy({
-            afterLoad: function(element) {
-                
-                if(element.hasClass("main-slider-img")) {
-                    totalSlidesLoaded++;
-
-                    // check if all is loaded
-                    if(totalSlidesLoaded == totalSlidesToLoad) {
-                        StartMainSlider();
-                    }
-                }
-            }
-        });
+        $('.lazy').lazy();
     });
 
 

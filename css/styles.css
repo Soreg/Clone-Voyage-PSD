@@ -193,7 +193,8 @@ header {
     z-index: 0;
     display: inline-block;
     vertical-align: top;
-    margin-left: -4px; }
+    margin-left: -4px;
+    width: 100vw; }
     #slider-section .slider .slide .description {
       padding: 0 30px;
       color: white;
