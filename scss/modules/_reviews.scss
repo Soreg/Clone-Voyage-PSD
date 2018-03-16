@@ -1,0 +1,157 @@
+#reviews {
+    .container {
+        padding-bottom: 60px;
+        width: 100vw;
+        overflow: hidden;
+
+        .description {
+            text-align: center;
+            margin: 50px auto 30px auto;
+
+            h4 {
+                color: $theme-secondary-color;
+                text-transform: uppercase;
+            }
+
+            p {
+                color: #8293a4;
+                margin-top: 5px;
+            }
+
+        }
+
+        .reviews {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+
+            .review {
+                flex-shrink: 0;
+                max-width: 500px;
+                margin: 0 10px;
+                opacity: 0.5;
+                position: relative;
+                border-top: 1px solid #a5b3c2;
+                
+                
+
+                &.selected {
+                    border-top: 5px solid $theme-primary-color;
+                    opacity: 1;
+
+                    .outer {
+                        &:before {
+                            border-left: 35px solid transparent;
+                            border-right: 25px solid transparent;
+                            border-top: 30px solid #a5b3c2;
+                            bottom: -30px;
+                        }
+    
+                        &:after {
+                            border-left: 33px solid transparent;
+                            border-right: 23px solid transparent;
+                            border-top: 28px solid white;
+                        }
+
+                        .inner {
+                            padding-top: 20px;
+                        }
+
+                    }
+                }
+
+                .outer {
+                    position:relative;
+                    background: #a5b3c2;
+                    width: 100%;
+                    height: 100%;
+                    border-left: 1px solid #a5b3c2;
+                    border-right: 1px solid #a5b3c2;
+                    border-bottom: 1px solid #a5b3c2;
+                    transition: inherit;
+
+                    &:before {
+                        width: 0;
+                        height: 0;
+                        border-left: 15px solid transparent;
+                        border-right: 25px solid transparent;
+                        border-top: 40px solid #a5b3c2;
+                        position: absolute;
+                        content: " ";
+                        right: 40px;
+                        bottom: -40px;
+                        z-index: 1;
+                        transition: inherit;
+                    }
+
+                    &:after {
+                        width: 0;
+                        height: 0;
+                        border-left: 13px solid transparent;
+                        border-right: 23px solid transparent;
+                        border-top: 38px solid white;
+                        position: absolute;
+                        content: " ";
+                        right: 42px;
+                        z-index: 2;
+                        transition: inherit;
+                    }
+                    
+                    .inner {
+                        padding: 24px;
+                        background:white;
+                        width: 100%;
+                        height: 100%;
+                        transition: inherit;
+                        
+
+                        h5 {
+                            color: lighten($theme-primary-color, 10%);
+                            margin: 3px 0;
+                        }
+        
+                        h6.location {
+                            color: rgb(165, 165, 165);
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .container .reviews {
+            .review {
+                max-width: 400px;
+
+                .outer .inner {
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 730px) {
+        .container .reviews {
+            .review {
+                max-width: 300px;
+
+                .outer .inner {
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 300px) {
+        .container .reviews {
+            .review {
+                max-width: 240px;
+
+                .outer .inner {
+                }
+            }
+        }
+    }
+    
+}

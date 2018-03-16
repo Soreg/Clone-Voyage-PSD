@@ -1,0 +1,108 @@
+#specials {
+    padding-bottom: 50px;
+    .description {
+        text-align: center;
+        margin: 60px auto 50px auto;
+        h4 {
+            text-transform: uppercase;
+            color: $theme-secondary-color;
+            margin-bottom: 5px;
+        }
+        p {
+            color: #8293a4;
+        }
+    }
+    .packages {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; // change
+        .package {
+            border-radius: 5px;
+            padding: 5px;
+            width: 270px;
+            border: 1px solid #eeeeee;
+            background: #eeeeee;
+            margin: 0 15px 60px 15px;
+            height: 260px;
+            transition: all ease .3s;
+
+            .img-container {
+                height: 80%;
+                overflow: hidden;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    min-width: 100%;
+                    min-height: 100%;
+                    position: absolute;
+                    &.tall {
+                        width: 100%;
+                        height: auto;
+                    }
+                    &.wide {
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+            }
+            .details {
+                padding: 10px; 
+                height: 20%;
+                width: 100%;
+
+                p {
+                    font-size: 16px;
+                    color: #8e8e8e;
+                    &:first-child {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            // package hover
+            &:hover {
+                border-color: $theme-primary-color;
+                background: $theme-primary-color;
+                height: 300px;
+                margin: 0 15px 20px 15px;
+
+                cursor: pointer;
+                .details {
+                    background: $theme-secondary-color;
+                    p:first-child {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1500px) {
+        padding-bottom: 50px;
+        .packages {
+            width: 1000px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            .package {
+                width: 300px;
+                margin-bottom: 60px;
+            }
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        .packages {
+            width: 670px;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .packages {
+            width: 300px;
+
+            .package:hover {
+                margin: -40px 15px 60px 15px;
+            }
+        }
+    }
+}
