@@ -1,4 +1,5 @@
 var StartMainSlider = function() {
+    
     // Settings
     var timeBetweenSlides = 5000;
     var slideSpeed = 2000;
@@ -40,6 +41,7 @@ var StartMainSlider = function() {
     // Slide
     var slideTimer = setInterval(function() {
         slides.animate({"margin-left": "-=" + screenWidth}, slideSpeed, function() {
+            
             slideLogic("right");
         });
     }, timeBetweenSlides);
@@ -58,6 +60,7 @@ var StartMainSlider = function() {
 
     // when clicking the next-button
     $(".next-arrow").click(function() {
+        
         slides.finish();
         slides.animate({"margin-left": "-=" + screenWidth}, slideSpeed, function() {
             slideLogic("right");

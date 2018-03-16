@@ -1,36 +1,21 @@
-// Calculate if image if tall or wide
 $(document).ready(function(){
 
-    // Preload all images before loading
-    var preloadImages = function() {
-        $("body").css("overflow-y", "hidden");
-        var fadeTime = 1000;
-        var percentComplete = 0;
-        var total_images = $("body img").length;
-        var images_loaded = 0;
-        var percentPerImage = 100 / total_images;
-        
-        $("body").find('img').each(function() {
-            var fakeSrc = $(this).attr('src');
-            $("<img/>").attr("src", fakeSrc).css('display', 'none').on('load', function() {
-                images_loaded++;
-                percentComplete += percentPerImage;
-                $(".preloader .percentage").html(Math.round(percentComplete) + " % complete ...");
-                
-                if (images_loaded >= total_images) {
-                    // When images are loaded
-                    $(".preloader h2:first-child").html("Preload complete");
-                    $(".preloader .percentage").html("100%");
-                    
-                    $( ".preloader" ).fadeOut(fadeTime, function() {
-                        // After fade is done
-                        $("body").css("overflow-y", "scroll");
-                        $(".preloader").css("display", "none");
-                    });
-                }
-            });
-        });
-    }
+    // Preload slider images first (Required for JS to work due to Lazyload)
+    var sliderImgsToLoad = ($(".main-slider-img"));
+    $(function() {
+        for (var i = 0; i < sliderImgsToLoad.length; i++) {
+            $("<img />").attr("src", sliderImgsToLoad[i]);
+        }
+        StartMainSlider();
+    });
+
+    
+    
+
+    $(function() {
+        $('.lazy').lazy();
+    });
+
 
     // Assign classes to images
     $('#specials .packages').find('img').each(function(){
@@ -54,10 +39,8 @@ $(document).ready(function(){
         }, 1000);
     });
 
-// start sliders
-preloadImages();
-StartMainSlider();
-StartReviewSlider();
+    StartReviewSlider();
+    
 
 
 // Burger menu on-click
